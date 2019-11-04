@@ -1,1 +1,93 @@
-\section{ parabolic orbits hyperbolic orbits:hyperbolic heliocentric  }\label{sec:q2}    
+\section{Exercise 2}
+We have a body in an elliptical orbit with low eccentricity around the Sun. It is assumed only the Sun's pull and solar radiation pressure are acting on this body. The equations of motion then become:
+
+\begin{equation} \label{eq:2StartingEq}
+    \begin{split}
+        \Ddot{r} - r \dot{\theta}^2 = \frac{-\mu}{r^2} + \frac{F}{m} \sin{(\delta)} \\
+        \frac{d}{dt}(r^2 \dot{\theta}) = \frac{F}{m} r \cos{(\delta)}
+    \end{split}
+\end{equation}
+
+With
+\begin{equation}
+    F = C_R \frac{W S}{c}
+\end{equation}
+
+If it is assumed that the Sun emits energy radial-symmetric and that the body circling the Sun is spherical, we can write the equation for the acceleration of the body due to the radiation pressure using the above formula in the following way:
+
+\begin{equation} \label{eq:2aFm}
+    \frac{F}{m} = \frac{3}{4} \frac{C_R W_S R_S^2}{c \rho R} \frac{1}{r^2}
+\end{equation}
+
+For a given body we get the following:
+
+\begin{equation}
+    \frac{F}{m} = \frac{\alpha}{r}    
+\end{equation}
+With $\alpha$ a constant
+
+\subsection*{a.}
+Asked is what the parameters in the equations mean.
+\begin{itemize}
+    \item $r$: Radial distance between the Sun and the body
+    \item $\theta$: Angle between the periapsis and the body in orbit
+    \item $\mu$: Approximately $G m_{Sun}$ since the mass of the body is negligible compared to the mass of the Sun
+    \item $m$: Mass of the body
+    \item $\delta$: Angle between the force and the normal to the radius vector
+    \item $C_R$: Reflectivity of the satellite
+    \item $W$: Radiation flux
+    \item $S$: Effective cross-sectional area
+    \item $c$: Speed of light
+    \item $R_S$: Radius of the Sun
+    \item $\rho$: Density of the body
+    \item $R$: Radius of the body
+\end{itemize}
+
+\subsection*{b.}
+For the derivation of these formulae, we used the frequency of the solar light. However, if the body has a radial velocity with respect to the Sun, the frequency of the solar light is shifted through the Doppler effect to another frequency.
+Additionally, there is the light-time effect, which means that the speed of light is finite and that the solar light intercepted at a certain time is emitted by the Sun at an earlier time. hits leads to aberration of the incoming Solar light. These phenomena can be described by the following formulae:
+
+\begin{equation}
+    \begin{split}
+        W' = W(1-\frac{\dot{r}}{c}) \\
+        \gamma = \frac{r \dot{\theta}}{c}
+    \end{split}
+\end{equation}
+
+\subsection*{c.}
+Substitution of this adapted radiation flux into equation (\ref{eq:2aFm}) gives then 
+\begin{equation}
+    \frac{F}{m} = \frac{\alpha}{r^2}(1-\frac{\dot{r}}{c})
+\end{equation}
+This since the radiation flux has to be multiplied with $1-\frac{\dot{r}}{c}$
+
+
+Now, $\delta$ is the angle between the direction of $\frac{F}{m}$ and the tangential, and $\gamma$ is the aberration angle. Thus, we can say $\sin{(\delta)} = \cos{(\gamma)}$ and $\cos{(\delta)} = -\sin{(\gamma)}$. Since $\gamma$ is small, we can approximately say (using first order approximation):
+
+\begin{equation}
+    \begin{split}
+        \sin{(\delta)} \approx 1 \\
+        \cos{(\delta)} \approx -\gamma = \frac{- r \dot{\theta}}{c}
+    \end{split}
+\end{equation}
+
+Substitution into equations (\ref{eq:2StartingEq}) then automatically leads to:
+
+\begin{equation}
+    \begin{split}
+        \Ddot{r} - r \dot{\theta}^2 = - \frac{\mu - \alpha}{r^2} - \frac{\alpha \dot{r}}{c r^2} \\
+        \frac{d}{dt}(r^2 \dot{\theta}) = - \frac{\alpha \dot{\theta}}{c}
+    \end{split}
+\end{equation}
+
+These equations show that the solar radiation pressure counteracts the gravitational acceleration by the Sun, and includes a term proportional to the circumferential velocity of the body. So on one end, the solar radiation pressure prevents the body from gradually falling into the Sun, but on the other end the other term has a minus sign and introduces drag, which shortens the length of the year for the body. This is called the Poynting-Robertson effect.
+
+\subsection*{d.}
+With increasing values of $\alpha$, the effect of radiation pressure on the orbit of the body increases. $\alpha$ is equal to $\frac{3 C_R W_S R_S^2}{4 c \rho R}$. Thus, this effect is the largest for a highly reflective, low density and small body. Ice particles fall in this category, and so do other small particles.
+
+\subsection*{e.}
+For a values of $\alpha = \mu$, the first equation of section c is in good approximation equal to 0, since $\dot{r} << c$, meaning that only the drag term is still present. If a lot of such particles would exist in the inner system, a lot of solar light would be reflected or absorbed in various ways and we would see the Sun as blurry. This is not the case; we see it has a bright, sharp light source and thus little of these particles are in between the Earth and the Sun (possibly since the solar radiation pressure drag has lead to absorption of such particles in the Sun)
+
+
+
+
